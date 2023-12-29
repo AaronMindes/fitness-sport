@@ -1,0 +1,108 @@
+@use "../../index.scss" as gs;
+
+.preset-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    background-color: #0340787a;
+    border: 1px solid gs.$five-color;
+    margin: 10px;
+    color: gs.$primary-color;
+    box-shadow: 1px 1px 2px #0a112857;
+    border-radius: 2px;
+    padding: 25px;
+    min-height: 100%;
+    transition: all 0.6s ease-in-out;
+    border-bottom: gs.$fourth-color solid 1px;
+
+    &:hover {
+        cursor: pointer;
+        background-color: gs.$third-color;
+
+        .time {
+            transition: all 0.2s ease-in-out;
+            transform: scale(1.1);
+        }
+
+    }
+
+    .title {
+        font-size: x-large;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-style: to-upper-case($string: "");
+        text-shadow: 1px 1px 2px #0a112857;
+        margin-bottom: 15px;
+        text-align: center;
+        font-weight: 600;
+        text-transform: uppercase;
+    }
+
+    .exercices-number {
+        margin-top: 15px;
+        margin-bottom: 15px;
+        display: flex;
+        align-items: start;
+
+        strong {
+            margin-right: 5px;
+        }
+
+        div {
+            margin-top: 15px;
+            margin-bottom: 15px;
+            text-shadow: 1px 1px 2px #0a112857;
+        }
+    }
+
+    .muscles {
+        margin-top: 15px;
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        flex-wrap: wrap;
+
+        .muscles-name {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: start;
+            text-transform: capitalize;
+
+            span {
+                margin-bottom: 5px;
+            }
+        }
+
+        strong {
+            justify-self: flex-start;
+            margin-right: 5px;
+        }
+    }
+
+    .time {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        flex-direction: column;
+        margin-top: 15px;
+
+        div {
+            margin-top: 15px;
+            width: 60px;
+            height: 60px;
+            background-color: gs.$primary-color;
+            color: gs.$third-color;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 2px 2px 4px #0a112857;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            font-weight: 700;
+        }
+    }
+    @media only screen and (max-width: 600px) {
+        min-width: 150px;
+    }
+}

@@ -1,0 +1,215 @@
+@use "../../../index.scss" as gs;
+
+.training-config-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-width: 60%;
+    max-width: 70%;
+    padding: 50px;
+    border-radius: 20px;
+    margin-bottom: 10px;
+
+    .card-container {
+        box-shadow: none;
+        background-color: transparent;
+    }
+
+    .training-info {
+        color: gs.$fourth-color;
+    }
+
+    .training-name {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        padding: 10px;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        font-size: x-large;
+        text-shadow: 1px 1px 2px #0a112857;
+        color: gs.$fourth-color;
+
+        input {
+            background-color: rgb(249 248 248 / 74%);
+            padding: 5px;
+            margin-top: 10px;
+            border-radius: 5px;
+            min-width: 15px;
+            border: none;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            border-bottom: 1px solid gs.$second-color;
+            transition: width 0.9s ease-in-out;
+            text-align: center;
+            box-shadow: 1px 1px 2px #0a112857;
+            color: gs.$fourth-color;
+            font-weight: 600;
+
+            &:focus {
+                width: 100% !important;
+                border: 0px;
+                outline: none;
+                border-bottom: 1px solid gs.$second-color;
+                border-left: 1px solid gs.$second-color;
+                border-right: 1px solid gs.$second-color;
+            }
+
+        }
+    }
+
+    .container-selected-card {
+        flex-wrap: wrap;
+        display: flex;
+        justify-content: space-between;
+        align-items: start;
+
+        .container {
+
+            display: flex;
+            align-items: center;
+
+            .content {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                margin: 5px;
+
+                // &:hover {
+                //     cursor: grab;
+                // }
+
+                .card-config {
+                    box-shadow: 4px 4px 8px 0px rgba(10, 17, 40, 0.3411764706);
+                    background-color: #fdfdfdf6;
+                    border-bottom: 1px solid gs.$second-color;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    border-radius: 10px;
+                    overflow-x: hidden;
+
+                    .training-config-card {
+                        margin-bottom: -54px;
+                        border-radius: 0 0 85% 85% / 30%;
+                        background-color: #12a295;
+                        width: 100%;
+                        height: 100%;
+                        padding-top: 10px;
+                        padding-bottom: 40px;
+                        display: flex;
+                        justify-content: center;
+                    }
+
+                }
+
+                h1 {
+                    margin: 0;
+                    margin-bottom: 15px;
+                    color: gs.$third-color;
+                    text-shadow: 1px 1px 2px #0a112857;
+                }
+            }
+
+            .arrow-container {
+                margin: 5px;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+
+                .arrow {
+                    padding: 5px;
+
+                    &:hover {
+                        cursor: pointer;
+                    }
+                }
+
+                .time {
+                    margin: 5px;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+
+                    // font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                    // margin-bottom: 10px;
+                    span {
+                        color: gs.$primary-color;
+                    }
+
+                    .time-content {
+                        display: flex;
+                        width: 100%;
+                        justify-content: space-around;
+                        align-items: center;
+                        text-align: center;
+
+                        span {
+                            width: 35px;
+                            height: 35px;
+                            padding: 5px;
+                            text-align: center;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            border-radius: 50%;
+                            background-color: gs.$second-color;
+                            color: gs.$primary-color;
+                            box-shadow: 1px 1px 2px #0a112857;
+                            white-space: nowrap;
+                            /* Prevent text from wrapping */
+                            font-size: small;
+                        }
+
+                        .buttons {
+                            // margin: 5px;
+                            display: flex;
+                            flex-direction: column;
+
+                            // justify-content: space-between;
+                            .button-div {
+                                margin: 5px;
+                                background-color: gs.$second-color;
+                                font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+                                border-radius: 5px;
+                                color: gs.$primary-color;
+                                box-shadow: 1px 1px 2px #0a112857;
+                                padding-left: 10px;
+                                padding-top: 2px;
+                                padding-right: 10px;
+                                padding-bottom: 2px;
+
+                                &:hover {
+                                    cursor: pointer;
+                                }
+                            }
+                        }
+                    }
+                }
+
+            }
+        }
+    }
+
+    @media only screen and (max-width: 600px) {
+        padding: 0px 50px 50px 50px;
+
+        .training-info {
+            font-size: small;
+        }
+
+        .training-name {
+            text-align: center;
+        }
+
+        .container-selected-card {
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            .container {
+                flex-direction: column;
+            }
+        }
+    }
+}

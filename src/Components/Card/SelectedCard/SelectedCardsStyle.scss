@@ -1,0 +1,45 @@
+@use "../../../index.scss" as gs;
+
+.selected-card-container {
+    display: flex;
+    flex-wrap: wrap;
+    overflow-x: hidden;
+    padding: 10px;
+    border-bottom: 1px solid gs.$second-color;
+    width: fit-content;
+    align-items: center;
+    justify-content: space-around;
+    // box-shadow: 1px 1px 4px #0a112857;
+    border-radius: 4px;
+    
+
+    .content {
+        position: relative;
+
+        .remove-card {
+            position: absolute;
+            background-color: #7b7272;
+            right: 15px;
+            top: 15px;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 1px 1px 2px 1px rgba(0, 0, 0, 0.493);
+            color: gs.$primary-color;
+            
+            &:hover {
+                cursor: pointer;
+                transform: scale(1.1); // Add scaling effect on hover
+            }
+        }
+    }
+
+    @media only screen and (max-width: 600px) {
+        overflow-y: scroll;
+        flex-wrap: nowrap;
+    }
+
+}

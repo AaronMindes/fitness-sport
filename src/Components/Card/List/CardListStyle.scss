@@ -1,0 +1,29 @@
+.card-list-container {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 3vw; // Adjust this for responsive padding
+    position: relative;
+
+    .content {
+        // flex-basis: 15.33333%; // Uncomment and adjust based on your design requirements
+    }
+
+    // Add media queries for responsive design
+    @media screen and (max-width: 768px) {
+        // Adjust styles for smaller screens
+        padding: 2vw;
+        .content {
+            // Adjust styles for smaller screens
+        }
+    }
+
+    @media screen and (max-width: 480px) {
+        // Adjust styles for even smaller screens
+        padding: 1vw;
+        .content {
+            // Adjust styles for even smaller screens
+        }
+    }
+}

@@ -1,0 +1,305 @@
+@use "../../index.scss" as gs;
+
+
+html,
+body,
+#root {
+    height: 100%;
+    margin: 0;
+}
+
+.run-exercises-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    height: 100%;
+    overflow-y: hidden;
+
+    .before-start {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        height: 100%;
+        width: 100%;
+        background-image:
+            url("../../Images/background-jump.jpg");
+        background-repeat: repeat-x;
+        background-position: center;
+        background-attachment: fixed;
+        background-size: cover;
+        position: relative;
+        overflow-x: hidden;
+
+        .container-selected-cards {
+        }
+
+        .info-preset {
+
+            position: absolute;
+            display: flex;
+            align-items: start;
+            justify-content: start;
+            flex-direction: column;
+            min-width: 15vw;
+            max-width: 20vw;
+            left: 25px;
+            top: 25px;
+            bottom: 25px;
+            visibility: hidden;
+
+            &:hover {
+                visibility: visible;
+            }
+
+            &::before {
+                content: "!";
+                background-color: gs.$third-color;
+                color: gs.$primary-color;
+                width: 40px;
+                height: 40px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border-radius: 50%;
+                font-weight: 600;
+                font-size: x-large;
+                padding-bottom: 2px;
+                margin-bottom: 10px;
+                visibility: visible;
+            }
+
+            &:hover:before {
+                cursor: pointer;
+            }
+
+            .container-info-preset {
+                overflow-y: scroll;
+                height: 80vh;
+
+                &::-webkit-scrollbar-track {
+                    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+                    background-color: none;
+                    border-radius: 10px;
+                }
+
+                &::-webkit-scrollbar {
+                    width: 10px;
+                    background-color: none;
+                }
+
+                &::-webkit-scrollbar-thumb {
+                    border-radius: 10px;
+                    background-image: -webkit-gradient(linear,
+                            left bottom,
+                            left top,
+                            color-stop(0.44, gs.$second-color),
+                            color-stop(0.72, gs.$third-color),
+                            color-stop(0.86, gs.$fourth-color));
+                }
+
+                .info-display {
+                    background-color: gs.$five-color;
+                    color: gs.$primary-color;
+                    padding: 15px;
+                    border-radius: 10px;
+                    margin-bottom: 10px;
+                    cursor: default;
+                }
+
+            }
+
+        }
+    }
+
+    .start-button {
+        padding: 15px;
+        margin: 15px;
+        font-size: xx-large;
+        background-color: #034078f1;
+        border-radius: 4px;
+        box-shadow: 1px 1px 2px #0a112857;
+        color: gs.$primary-color;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+        &:hover {
+            cursor: pointer;
+        }
+    }
+
+    .start-container {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        text-align: center;
+        background-color: gs.$five-color;
+        height: 100%;
+        width: 100%;
+
+        .countdown {
+            width: 500px;
+            height: 500px;
+            border-radius: 50%;
+            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: gs.$primary-color;
+            box-shadow: 1px 1px 2px #0a112857;
+            text-shadow: 1px 1px 2px #0a112857;
+            font-size: 200px;
+        }
+
+        .container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            // color: gs.$primary-color;
+
+            .time {
+                width: 300px;
+                height: 300px;
+                border-radius: 50%;
+                text-align: center;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                background-color: gs.$primary-color;
+                box-shadow: 1px 1px 2px #0a112857;
+                text-shadow: 1px 1px 2px #0a112857;
+                font-size: 200px;
+                margin-bottom: 25px;
+            }
+
+            .images {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                text-wrap: wrap;
+
+                img {
+                    border-radius: 20px;
+                    box-shadow: 1px 1px 2px #0a112857;
+                    height: 500px;
+                }
+
+            }
+
+            .instructions {
+                position: absolute;
+                display: flex;
+                flex-direction: column;
+                width: 15%;
+                text-wrap: wrap;
+                text-align: left;
+                padding: 40px;
+                font-weight: 700;
+                color: gs.$primary-color;
+                z-index: 1;
+                top: 25px;
+                left: 0;
+                visibility: hidden;
+
+                &::before {
+                    content: "!";
+                    visibility: visible;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    text-align: center;
+                    width: 40px;
+                    height: 40px;
+                    border-radius: 50%;
+                    background-color: gs.$primary-color;
+                    color: gs.$five-color;
+                    font-size: x-large;
+                    margin-bottom: 15px;
+                }
+
+                &:hover:before {
+                    cursor: pointer;
+                }
+
+                &:hover {
+                    visibility: visible;
+                }
+            }
+
+            .set {
+                margin-top: 5px;
+                color: gs.$primary-color;
+                z-index: 2;
+            }
+        }
+    }
+
+    @media only screen and (max-width: 600px) {
+        .before-start {
+            align-items: normal;
+            .info-preset {
+                max-width: 70vw;
+            }
+            .start-button{
+                text-align: center;
+            }
+            
+            .container-selected-cards {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: flex-start;
+                overflow-x: scroll;
+            }
+        }
+
+        .start-container {
+            .countdown {
+                width: 150px;
+                height: 150px;
+                font-size: 100px;
+            }
+
+            .container {
+                .time {
+                    width: 100px;
+                    height: 100px;
+                    font-size: 75px;
+                    z-index: 2;
+                    position: absolute;
+                    top: 0;
+                    right: 25px;
+                    margin: 40px;
+                }
+
+                .images {
+                    border-radius: none;
+                    img {
+
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        right: 0;
+                        bottom: 0;
+                        border-radius: 0px;
+                        box-shadow: none;
+                        height: 100%;
+                        width: 100%;
+                    }
+
+                }
+                .set{
+                    font-weight: 700;
+                }
+                .instructions{
+                    width: 50%;
+                    // color: gs.$pri-color;
+                    overflow-y: scroll;
+                }
+            }
+        }
+    }
+}

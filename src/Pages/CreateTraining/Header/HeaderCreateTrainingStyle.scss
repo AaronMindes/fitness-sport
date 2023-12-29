@@ -1,0 +1,147 @@
+@use "../../../index.scss" as gs;
+
+.header-create-training-container {
+    padding: 2vw;
+
+    h1 {
+        font-size: large;
+        color: gs.$five-color;
+        margin: 5px;
+        margin-right: 10px;
+    }
+
+    .toggle-menu-checkboxes {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        position: relative;
+
+        .filter-name {
+            color: gs.$third-color;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            margin-right: 30px;
+
+            &:hover {
+                cursor: pointer;
+            }
+
+            span {
+                margin-right: 5px;
+            }
+        }
+
+        .menu-options {
+            display: flex;
+            transition: all 0.2s ease-in-out;
+            flex-direction: column;
+            position: absolute;
+            width: max-content;
+            background-color: #fefcfbef;
+            color: gs.$five-color;
+            border-radius: 5px;
+            box-shadow: 2px 2px 8px #0a112857;
+            z-index: 2;
+            opacity: 0;
+
+            .options-name {
+                margin: 5px;
+                font-weight: 400;
+                text-transform: capitalize;
+                color: gs.$fourth-color;
+
+                input[type='checkbox'] {
+                    accent-color: gs.$third-color;
+                }
+
+                &:hover {
+                    cursor: pointer;
+                }
+            }
+        }
+
+        .open {
+            opacity: 1;
+            // transition: all 1s ease-in-out;
+        }
+
+    }
+
+    button {
+        width: fit-content;
+        padding: 10px;
+        color: gs.$primary-color;
+        background-color: gs.$third-color;
+        border: none;
+        border-radius: 5px;
+        font-size: small;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 1px 1px 2px #0a112857;
+
+
+
+        &:hover {
+            cursor: pointer;
+        }
+    }
+
+    .filters-handle-container {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+
+        .container {
+            width: fit-content;
+            padding: 5px;
+            color: gs.$primary-color;
+            background-color: gs.$third-color;
+            border: none;
+            border-radius: 5px;
+            font-size: small;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 5px;
+            text-transform: capitalize;
+
+            .x-container {
+                // background-color: gs.$primary-color;
+                // border-radius: 4px;
+                padding: 2px;
+                font-size: small;
+                font-weight: 600;
+                margin-left: 5px;
+                color: gs.$five-color;
+
+                &:hover {
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+
+    @media only screen and (max-width: 600px) {
+        .toggle-menu-checkboxes{
+            .filter-name{
+                margin-right: 0px;
+                margin: 5px;
+            }
+            button{
+                padding: 8px;
+            }
+            .filters-handle-container .container {
+                padding: 5px;
+            }
+
+        }
+
+    }
+
+}

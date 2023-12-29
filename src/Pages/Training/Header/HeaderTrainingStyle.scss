@@ -1,0 +1,31 @@
+@use "../../../index.scss" as gs;
+
+.headerTraining-container {
+  
+    // height: 35rem;
+    // height: max-content;
+    // height: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: gs.$primary-color;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: xx-large;
+    text-shadow: 1px 1px 2px gs.$five-color;
+    // margin: 0 auto;
+    
+        h1 {
+            text-align: center;
+            transition: transform 1s ease-in-out;
+            transform: translate(-10%, -20%); // Initial position outside the container
+        }
+    
+        &.visible h1 {
+            transform: translate(0, 0); // Move to the original position
+        }
+    
+        @media only screen and (max-width: 600px) {
+            font-size: medium;
+        }
+}

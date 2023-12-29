@@ -1,0 +1,32 @@
+.training-container {
+    background-image: linear-gradient(#fefcfb25, #fefcfb50),
+        url("../../../src/Images/background-sport-training.jpg");
+    background-repeat: repeat-x;
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+    // height: max-content;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    // justify-content: space-between;
+ 
+    .container{
+        display: flex;
+        flex-direction: column;
+        align-items: normal;
+        height: inherit;
+        justify-content: space-around;
+    }
+    @media only screen and (max-width: 600px) {
+        // justify-content: flex-start;
+        justify-content: initial;
+        .container{
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+    }
+}

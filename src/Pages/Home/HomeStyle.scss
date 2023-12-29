@@ -1,0 +1,13 @@
+.home-container {
+    background-image:
+        url("../../Images/background-jump.jpg");
+    background-repeat: repeat-x;
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+    height: 100%;
+    overflow-x: hidden;
+    @media only screen and (max-width: 600px) {
+        // height: max-content;
+    }
+}

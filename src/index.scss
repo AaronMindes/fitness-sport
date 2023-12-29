@@ -1,0 +1,62 @@
+// palette color
+$primary-color: #FEFCFB;
+$second-color: #1282A2;
+$third-color: #034078;
+$fourth-color: #001F54;
+$five-color: #0A1128;
+$selected-color: #12a265;
+
+
+// html,
+// body,
+// #root {
+//     height: 100%;
+//     margin: 0;
+// }
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  color: $five-color;
+  background-color: $primary-color;
+
+  &::-webkit-scrollbar-track
+  {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+    background-color: $primary-color;
+    border-radius: 10px;
+  }
+  
+  &::-webkit-scrollbar
+  {
+    width: 10px;
+    background-color: $primary-color;
+  }
+  
+  &::-webkit-scrollbar-thumb
+  {
+    border-radius: 10px;
+    background-image: -webkit-gradient(linear,
+                       left bottom,
+                       left top,
+                       color-stop(0.44, $second-color),
+                       color-stop(0.72, $third-color),
+                       color-stop(0.86, $fourth-color));
+  }
+
+  a{
+    text-decoration: none;
+    color: $primary-color;
+  }
+
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}

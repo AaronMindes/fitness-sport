@@ -1,0 +1,59 @@
+@use "../../index.scss" as gs;
+
+.nav-container {
+    width: 100%;
+    height: fit-content;
+
+    .ul-list {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        margin: 0;
+        // background-color: gs.$primary-color;
+        box-shadow: 5px -3px 5px gs.$five-color;
+        flex-wrap: wrap;
+
+        li {
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 5px;
+            margin-right: 80px;
+            list-style: none;
+
+            .nav-link {
+                text-decoration: none;
+                color: gs.$five-color;
+                text-align: center;
+
+                &:hover {
+                    color: #1283a280;
+                }
+            }
+
+            .active {
+                text-decoration: none;
+                color: gs.$second-color;
+            }
+        }
+
+        img {
+            width: 50px;
+            height: 50px;
+            border-radius: 40%;
+        }
+    }
+
+    @media only screen and (max-width: 600px) {
+        .ul-list {
+            padding: 0;
+            flex-direction: column;
+
+            li {
+                margin-right: 0;
+            }
+        }
+    }
+
+}

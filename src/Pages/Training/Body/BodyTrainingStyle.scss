@@ -1,0 +1,47 @@
+@use "../../../index.scss" as gs;
+
+.bodyTraining-container {
+    padding: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    // height: 100%;
+
+    .nav-link {
+        font-size: 17px;
+        font-weight: 200;
+        letter-spacing: 1px;
+        padding: 30px 65px 30px;
+        z-index: 1;
+        outline: 1px solid gs.$five-color;
+        cursor: pointer;
+        position: relative;
+        background-color: rgba(0, 0, 0, 0);
+
+        &::after {
+            content: "";
+            background-color: gs.$third-color;
+            width: 100%;
+            z-index: -1;
+            position: absolute;
+            height: 100%;
+            top: 7px;
+            left: 7px;
+            transition: 0.2s;
+        }
+
+        &:hover {
+            &::after {
+                top: 0px;
+                left: 0px;
+            }
+        }
+    }
+    @media only screen and (max-width: 600px) {
+        flex-direction: column;
+        .nav-link{
+            padding: 10px 20px 10px;
+            margin-bottom: 50px;
+        }
+    }
+}

@@ -1,0 +1,31 @@
+@use "../../../index.scss" as gs;
+
+.body-home-container {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+
+    .your-preset {
+        font-family: 'Times New Roman', Times, serif;
+        font-size: xx-large;
+        margin: 10px;
+        color: gs.$primary-color;
+        text-shadow: 1px 1px 2px gs.$five-color;
+    }
+
+    .presets-container {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: start;
+    }
+
+    @media only screen and (max-width: 600px) {
+        .presets-container {
+            overflow-x: scroll;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            align-items: flex-start;
+        }
+    }
+
+}
