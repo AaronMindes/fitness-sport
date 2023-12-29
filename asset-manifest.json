@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/github.io/fitness-sport/static/css/main.5ea1d5a3.css",
+    "main.js": "/github.io/fitness-sport/static/js/main.7d697a9a.js",
+    "static/media/background-wood.jpg": "/github.io/fitness-sport/static/media/background-wood.dd23ffe2b448a400b4a1.jpg",
+    "static/media/background-aquarelle.jpg": "/github.io/fitness-sport/static/media/background-aquarelle.4b76050fdf088aec9751.jpg",
+    "static/media/1.jpg": "/github.io/fitness-sport/static/media/1.74fab9ce8515f43bc0aa.jpg",
+    "static/media/0.jpg": "/github.io/fitness-sport/static/media/0.41fa432e66574ff86bae.jpg",
+    "static/media/background-sport-training.jpg": "/github.io/fitness-sport/static/media/background-sport-training.7e79031355d4931ae668.jpg",
+    "static/media/background-jump.jpg": "/github.io/fitness-sport/static/media/background-jump.dd59ef5c511f7e74832e.jpg",
+    "static/media/logo.png": "/github.io/fitness-sport/static/media/logo.8e64849d87ffe731cd43.png",
+    "index.html": "/github.io/fitness-sport/index.html",
+    "main.5ea1d5a3.css.map": "/github.io/fitness-sport/static/css/main.5ea1d5a3.css.map",
+    "main.7d697a9a.js.map": "/github.io/fitness-sport/static/js/main.7d697a9a.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.5ea1d5a3.css",
+    "static/js/main.7d697a9a.js"
+  ]
+}
