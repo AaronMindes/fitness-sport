@@ -79,9 +79,9 @@ const TrainingConfig = ({ initialSelectedCards, myPreset, myPresetName }) => {
     return (
         <div className='training-config-container'>
             <div className='training-info'>
-                <h2>Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque soluta cumque illum quod adipisci obcaecati tempora qui quidem, iure at corporis non deserunt.</h2>
-                <h2>Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque soluta cumque illum quod adipisci obcaecati tempora qui quidem, iure at corporis non deserunt.</h2>
-                <h2>Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque soluta cumque illum quod adipisci obcaecati tempora qui quidem, iure at corporis non deserunt.</h2>
+                <h2>The Button time in the card configure the time of the exerice</h2>
+                <h2>The Button set in the card configure how time you will do this exerice</h2>
+                <h2>The Button on the side of the card configure the pause time between two exercice</h2>
             </div>
 
             <div className='training-name'>
