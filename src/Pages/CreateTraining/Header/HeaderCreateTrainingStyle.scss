@@ -128,14 +128,18 @@
     }
 
     @media only screen and (max-width: 600px) {
-        .toggle-menu-checkboxes{
-            .filter-name{
+        .toggle-menu-checkboxes {
+            margin-bottom: 15px;
+
+            .filter-name {
                 margin-right: 0px;
                 margin: 5px;
             }
-            button{
+
+            button {
                 padding: 8px;
             }
+
             .filters-handle-container .container {
                 padding: 5px;
             }

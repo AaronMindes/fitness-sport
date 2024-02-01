@@ -22,7 +22,6 @@ const ConfigCard = ({ onChangeConfig, cardId }) => {
   };
 
   useEffect(() => {
-    // console.log(onChangeConfig)
     // Call the parent component's function with the updated values
     onChangeConfig(cardId,
       seriesNumber,

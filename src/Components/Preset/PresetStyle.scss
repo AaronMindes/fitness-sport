@@ -3,7 +3,7 @@
 .preset-container {
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: space-between;
     background-color: #0340787a;
     border: 1px solid gs.$five-color;
     margin: 10px;
@@ -11,7 +11,6 @@
     box-shadow: 1px 1px 2px #0a112857;
     border-radius: 2px;
     padding: 25px;
-    min-height: 100%;
     transition: all 0.6s ease-in-out;
     border-bottom: gs.$fourth-color solid 1px;
 
@@ -23,7 +22,6 @@
             transition: all 0.2s ease-in-out;
             transform: scale(1.1);
         }
-
     }
 
     .title {
@@ -102,6 +100,7 @@
             font-weight: 700;
         }
     }
+
     @media only screen and (max-width: 600px) {
         min-width: 150px;
     }

@@ -108,4 +108,10 @@
         }
     }
 
+    @media only screen and (max-width: 600px) {
+        .description-container{
+            opacity: 0;
+        }
+    }
+
 }

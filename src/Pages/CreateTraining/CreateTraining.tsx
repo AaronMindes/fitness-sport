@@ -9,7 +9,7 @@ import SelectedCards from '../../Components/Card/SelectedCard/SelectedCards';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faAngleUp } from '@fortawesome/free-solid-svg-icons';
 import TrainingConfig from '../../Components/Card/TrainingConfig/TrainingConfig';
-import { NavLink } from 'react-router-dom';
+import { NavLink, useNavigate } from 'react-router-dom';
 import IPreset from '../../Components/Preset/Interface/PresetInterface';
 
 export const CreateTraining = () => {
@@ -27,6 +27,8 @@ export const CreateTraining = () => {
     const [newFilter, setNewFilter] = useState<ICard[]>([]);
     const [validatePresets, setValidatePresets] = useState<IPreset[]>([]);
     const [presetTitle, setPresetTitle] = useState<string>("");
+    const navigate = useNavigate();
+
 
     const handleSelectedFiltersChange = (newFilters) => {
         setSelectedFilters(newFilters);
@@ -57,10 +59,15 @@ export const CreateTraining = () => {
     }
 
     const validateExercie = () => {
-        const newPreset = { presetTitle: presetTitle, exercices: validatePresets };
-        let storedObjectArray = JSON.parse(localStorage.getItem('myPresets')) || [];
-        storedObjectArray.push(newPreset);
-        localStorage.setItem('myPresets', JSON.stringify(storedObjectArray));
+        if(presetTitle != ""){
+            const newPreset = { presetTitle: presetTitle, exercices: validatePresets };
+            let storedObjectArray = JSON.parse(localStorage.getItem('myPresets')) || [];
+            storedObjectArray.push(newPreset);
+            localStorage.setItem('myPresets', JSON.stringify(storedObjectArray));
+            navigate("/");
+        }else{
+            alert("give a title");
+        }
     }
 
 
@@ -91,7 +98,7 @@ export const CreateTraining = () => {
             <ul className='steps'>
                 {nextStep ? <li onClick={() => setNextStep(false)}>Prev</li> : null}
                 <li className='next' onClick={() => selectedCards.length === 0 ? alert("You need to choice at least one exercice") : setNextStep(true)}>
-                    {nextStep ? <div onClick={() => validateExercie()}> <NavLink to="/">Validate</NavLink></div> : <div>Next</div>}
+                    {nextStep ? <div onClick={() => validateExercie()}>Validate</div> : <div>Next</div>}
                 </li>
             </ul>
             <div className={`step1 ${nextStep ? 'hidden' : ''}`}>

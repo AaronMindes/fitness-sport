@@ -42,6 +42,18 @@ const RunExercices = () => {
         // setTimeExercies(secondsToMinutesAndSeconds(counter));
     }
 
+    const updateExeCounter = () => {
+        // const isExist = localStorage.getItem('exeCounter');
+        // if(isExist){
+        let isExist = localStorage.getItem('exeCounter');
+        console.log("isExist:", isExist);
+        // console.log("isExistN:", Number(isExist)+1);
+
+        localStorage.setItem('exeCounter', JSON.stringify(Number(isExist) + 1));
+        // }
+        console.log("isExistAfter:", localStorage.getItem('exeCounter'));
+    }
+
 
     const startTraining = () => {
         setStart(true);
@@ -103,12 +115,13 @@ const RunExercices = () => {
 
 
                         setCounter((prevCounter) => {
-                            console.log(cardSeriesNumber)
-                            console.log(tempIsPauseTime)
                             const nextCounter = prevCounter + 1;
                             if (nextCounter === cards.length && cardSeriesNumber < 1) {
                                 clearInterval(exercisesInterval);
                                 setStart(false);
+                                updateExeCounter();
+                                console.log("end")
+                                // add counter exe;
                                 navigate('/');
                             } else if (cardSeriesNumber > 0) {
                                 if (cards[counter].pauseTime > 0) { tempIsPauseTime = !tempIsPauseTime; setIsPauseTime((prevPauseTime) => { return !prevPauseTime }); }
@@ -134,6 +147,7 @@ const RunExercices = () => {
 
             return () => clearInterval(exercisesInterval);
         }
+        console.log("test")
     }, [start, countdown, time, counter, cards]);
 
     // tempObject.push({ name: preset.name, level: preset.level, equipment: preset.equipment, instructions: preset.instructions, category: preset.category, pauseTime: preset.pauseTime, seriesNumber: preset.seriesNumber, })

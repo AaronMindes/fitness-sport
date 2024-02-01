@@ -9,9 +9,14 @@ const BodyHome = () => {
 
   useEffect(() => {
     const localPreset = localStorage.getItem('myPresets');
-    console.log(localPreset);
     if (localPreset) setPreset(JSON.parse(localPreset));
   }, [])
+
+  const removePreset = (index) => {
+    const newStorage = preset.filter((p, i) => i !== index);
+    setPreset(newStorage);
+    localStorage.setItem('myPresets', JSON.stringify(newStorage));
+  }
 
   return (
     <div className='body-home-container'>
@@ -22,12 +27,13 @@ const BodyHome = () => {
         <div>
           <div className='your-preset'>Presets:</div>
           <div className="presets-container">
-            {preset.map((p,index) => (
-              // <NavLink to={`/runExercices/${index}`}>
-              <NavLink key={index} to={`/runExercices/${index}`}>
-                <Preset preset={p}></Preset>
-              </NavLink>
-              // </NavLink>
+            {preset.map((p, index) => (
+              <div key={index} className='container-preset-and-button'>
+                <NavLink key={index} to={`/runExercices/${index}`}>
+                  <Preset preset={p}></Preset>
+                </NavLink>
+                <div className="remove-preset" onClick={() => removePreset(index)}>Remove</div>
+              </div>
             ))}
           </div>
         </div>

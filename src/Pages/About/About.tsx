@@ -1,12 +1,61 @@
-import React from 'react'
-import Navbar from '../../Components/NavBar/Navbar'
-import './AboutStyle.scss'
+import React from 'react';
+import Navbar from '../../Components/NavBar/Navbar';
+import './AboutStyle.scss';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faGithub, faLinkedin, faYoutube } from '@fortawesome/free-brands-svg-icons';
+import { faComputer, faGuitar } from '@fortawesome/free-solid-svg-icons';
 
 function About() {
+
+  const profilPicture = require('../../Images/aaronProfilPicChihrour.jpg');
+
   return (
     <div className='about-container'>
       <Navbar />
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto soluta quasi libero alias quas id doloribus consectetur ipsa nesciunt officiis dolore molestiae, magni ratione, exercitationem repellendus dolorem itaque ab laboriosam dolorum delectus ad suscipit. Ipsum, sunt id cumque ducimus optio illo, rerum voluptatem non, reprehenderit fuga quam expedita quibusdam eveniet quo assumenda? Modi voluptates nesciunt dolorem? Rem eveniet inventore ut porro? Dolorem error animi libero sed iure earum dolores tenetur minus veniam commodi temporibus labore, quisquam blanditiis aspernatur ut iste corporis repudiandae. Suscipit ipsam cumque asperiores similique amet fugit dolore eius beatae consequuntur sit. Dolorum atque voluptatem, laboriosam labore enim eligendi odio iusto doloribus est ad mollitia perspiciatis? Ducimus rem nam tenetur illo ipsum animi. Eum pariatur veritatis ab ducimus, sapiente facere aliquam rem nesciunt, itaque ullam ipsam porro reprehenderit consequuntur unde adipisci numquam sunt? Explicabo modi id ratione maiores rerum facilis. Deleniti debitis, exercitationem ex repudiandae odit quaerat nostrum perspiciatis incidunt ipsum deserunt, mollitia obcaecati omnis voluptatum tempore. Debitis facere nemo cupiditate similique quisquam aut qui laudantium consequuntur accusamus eos optio iste est cum quo ut, magni id odio modi nulla. Qui temporibus facilis laboriosam neque. Ex exercitationem quas accusantium dolor quam impedit vitae mollitia quis veniam rem alias ratione quaerat eos, perferendis quae deserunt dignissimos sunt dolores, illum, itaque molestias? Consequatur nostrum harum at, ad nesciunt esse optio quibusdam! Debitis mollitia error ipsum, dignissimos eveniet officia exercitationem assumenda adipisci pariatur, delectus quia. Inventore ipsam debitis tenetur neque modi nobis dolorum deleniti quia error eaque asperiores veniam accusantium nemo et quibusdam, in provident, dolorem officiis nam dignissimos voluptas nesciunt quae. Reprehenderit eius quidem dolorem repellat nam corrupti, voluptatum perferendis, quas debitis omnis eaque porro non inventore blanditiis pariatur voluptatem reiciendis odit qui sunt. Expedita dolores at suscipit ipsa? Cupiditate obcaecati nemo, in, facilis maxime ut tempora sed doloribus qui id itaque quia impedit consequatur! Rerum assumenda reiciendis delectus optio iure! Pariatur assumenda ut porro dignissimos dolore blanditiis recusandae id. Eaque voluptatum in asperiores officiis cumque architecto cum, temporibus dolorum aut mollitia voluptatibus ducimus vel dolor quis rerum corporis ex error similique! Tenetur nihil nisi nobis repellendus odit ipsa ratione voluptatem! Nihil culpa pariatur aperiam vero quod nobis accusantium sed nisi. Sapiente voluptatem eum rerum non nesciunt vero doloremque dolor illo ut recusandae debitis aliquid alias a praesentium repellendus, nulla perferendis amet laboriosam quos laudantium reprehenderit, velit fugit possimus. Et perferendis nostrum, mollitia recusandae qui quod unde deleniti. Architecto eaque quod, officia dignissimos unde non labore voluptates, tempora illo ut aut suscipit dicta alias ducimus debitis mollitia, id consectetur ad! Ipsum iusto rem, recusandae fugit voluptatem ipsam dicta quae odit! Eligendi illum repudiandae ad architecto, debitis reiciendis fuga repellat veniam, alias voluptas in consectetur assumenda doloribus deserunt error excepturi tenetur sapiente quibusdam aliquid. Excepturi, omnis nesciunt rem accusantium ab voluptatem delectus! Voluptatibus ipsum rerum laboriosam ab corrupti delectus quibusdam inventore laudantium temporibus, eveniet deserunt unde est sed? Porro quidem fugiat in at numquam nam, aliquid ducimus deleniti minima dolore nisi corrupti dignissimos maiores unde iure quae ut excepturi quasi odio, aliquam suscipit ipsum natus adipisci. Architecto magnam minus iure. Voluptate, omnis tenetur delectus perferendis corporis facere aliquam a ratione adipisci amet. Quibusdam aspernatur amet molestias minima recusandae quia sapiente nostrum maxime iusto tempore cum nulla doloribus et, modi cumque repellendus assumenda ea eligendi? In eum vero iure fuga placeat eligendi. Odio, similique vero quo repudiandae odit corporis maiores eos modi facere. Labore praesentium ratione atque, corrupti molestiae molestias deleniti nobis voluptates laudantium similique officia. Eveniet assumenda odio maxime labore ipsa ut quod aliquid corporis sapiente? Laudantium iste amet itaque voluptates magnam molestias error totam. Neque, esse sapiente! Aspernatur provident nulla minima quos autem atque. Provident, numquam nobis voluptates perspiciatis magni magnam quo praesentium iusto maxime, veniam excepturi! Harum soluta culpa eaque. Odio voluptas rerum consequatur magni. Ea, quia, blanditiis eaque illo earum molestiae optio ipsam nostrum voluptas placeat sapiente corporis modi nemo laborum consequatur quod iste eius aut, tenetur unde impedit fuga delectus veniam. Doloremque consectetur eligendi tempore eaque molestias accusamus obcaecati doloribus, maxime itaque dolorem incidunt? Sunt qui nulla nihil aliquam ad maxime, quia magni accusamus iste dignissimos a quo molestiae doloribus nesciunt ratione ipsum itaque rem laborum veritatis nisi necessitatibus eveniet aliquid laudantium. Quasi facere minus ullam. Tempore in quis amet consectetur rerum vitae ipsam cupiditate, nulla accusantium unde sunt voluptas odio ratione vel similique voluptatibus nam autem adipisci asperiores, ipsum doloremque odit. Quisquam suscipit esse provident consequatur illo qui magni natus officia dolorum cum laudantium obcaecati excepturi quis corporis magnam voluptas ipsum fuga, iste corrupti explicabo vel. Et asperiores ipsa, similique labore hic accusantium autem totam soluta voluptatum consequatur provident error natus placeat incidunt repudiandae nihil doloremque veniam esse! Dolore molestias fugiat possimus esse sint nisi unde itaque quasi consequuntur ipsum est, assumenda repudiandae tempora vitae! Quibusdam consequuntur harum similique architecto nam, perferendis vero cum molestiae recusandae saepe, deleniti quia nesciunt voluptatum asperiores rem voluptatibus accusamus reiciendis culpa sunt aperiam? Enim, aperiam recusandae reprehenderit atque, dolore corporis velit, molestiae voluptates voluptatem aliquid eveniet maxime quia corrupti at fuga esse praesentium itaque fugiat a nostrum debitis eligendi. Eligendi officiis odit distinctio vero, et dolor, reprehenderit illum necessitatibus iure deserunt nam soluta corrupti ipsam. Ducimus veritatis rem, facilis, qui possimus quia aliquam, quo minus dicta impedit voluptatum sapiente dolor mollitia officia consequatur odit nihil magni expedita totam a voluptas reprehenderit perferendis quaerat! Totam, eveniet aspernatur aut eum quisquam, dolores, nisi iste doloribus alias quo asperiores saepe repellat rem quibusdam cumque deserunt culpa. Commodi, obcaecati? Labore, voluptate? Rem voluptatum commodi deserunt, maiores doloremque quis nemo! Ipsum numquam, quaerat molestias impedit accusantium voluptate sed aut voluptatem iste necessitatibus ratione sunt ullam! Aliquam ea, a quae exercitationem minus deleniti nesciunt, necessitatibus itaque alias ab vitae aliquid aperiam voluptate, maxime ex atque fugit molestiae delectus cumque culpa. Ipsa iusto consequuntur ducimus quis id nulla ex eum saepe repellat provident eveniet perferendis esse placeat recusandae vitae reiciendis blanditiis voluptatum quos suscipit quisquam eius adipisci quia, incidunt exercitationem! Fugiat distinctio beatae, rem culpa illo obcaecati. Corrupti, temporibus nisi? Alias aperiam totam voluptatibus error atque veniam, voluptas in voluptatem nobis ea dolore deserunt laborum maxime natus eius repudiandae enim temporibus similique provident, fugiat ipsa quod commodi suscipit. Quam sunt esse quibusdam repellendus eveniet eaque quo ratione laboriosam eligendi ducimus ut ex recusandae, suscipit laudantium nihil ullam dignissimos! Nulla labore possimus aspernatur. Quam quos facere commodi tempore perferendis harum quisquam, animi, ex, debitis reprehenderit quidem dolore adipisci soluta perspiciatis quae vitae! Aperiam rem voluptas perferendis voluptatibus corrupti molestias quidem commodi alias, assumenda soluta? Ex quibusdam quos architecto eius magnam. Necessitatibus corporis dignissimos quod molestiae veniam quam eius repudiandae quas provident totam dolores voluptatibus, iste ut porro? Amet veritatis deserunt doloremque dolore minus autem reprehenderit accusantium voluptate, quod libero unde perspiciatis nostrum dolorum numquam accusamus impedit facere dolor, est ut, voluptatem dignissimos nobis quibusdam atque odit. Ipsam est, necessitatibus aperiam unde voluptatem animi autem debitis quae amet accusantium deserunt explicabo odio, expedita veniam distinctio repellat rem quo tempora minima incidunt. Quasi corrupti facilis quos nulla ad placeat laboriosam, quam deleniti veritatis ex sunt minima hic dignissimos natus atque ratione fugiat dolores, blanditiis omnis. Dicta nisi maiores tempore animi necessitatibus perspiciatis officia voluptatum nam aut magni voluptates facere nihil, porro vitae, vero voluptas reprehenderit quas ex, voluptatibus illum nobis pariatur reiciendis aperiam! Repellat expedita consequuntur tempore dolores, quia doloribus facilis nisi aperiam officiis voluptatem sequi culpa voluptas est assumenda quo. Obcaecati explicabo ducimus quos, tempore quidem, nulla eligendi distinctio delectus, consequatur pariatur consequuntur!</p>
+      <div className='info'>
+        <div className='picture-profile-name'>
+          <div className='name'>
+            <div>Aaron</div>
+            <div>Mindes</div>
+          </div>
+          <div className="picture">
+            {/* Ajoutez ici l'image de profil */}
+            {/* <img src={profilPicture} alt="Profile" /> */}
+          </div>
+        </div>
+        <div className='social-network'>
+          {/* Ajoutez ici vos liens vers les réseaux sociaux */}
+          <div className='YT'>
+            <div className='YT-options'>
+              <FontAwesomeIcon icon={faYoutube} size='3x' color='#FF0000' />
+            </div>
+            <div className='YT-music'>
+              <a href="https://www.youtube.com/@AaronMindes" target="_blank" rel="noopener noreferrer"><FontAwesomeIcon icon={faGuitar} size='3x' color='#DEB887' /></a>
+            </div>
+            <div className='YT-programation'>
+              <a href="https://www.youtube.com/@KodKodProgramming" target="_blank" rel="noopener noreferrer"><FontAwesomeIcon icon={faComputer} size='3x' color='#A9A9A9' /></a>
+            </div>
+          </div>
+          <a href="https://www.linkedin.com/in/aaron-mindes-49670617b/" target="_blank" rel="noopener noreferrer"><FontAwesomeIcon icon={faLinkedin} size='3x' color='#0A66C2' /></a>
+          <a href="https://github.com/AaronMindes" target="_blank" rel="noopener noreferrer"><FontAwesomeIcon icon={faGithub} size='3x' color='#333' /></a>
+        </div>
+      </div>
+      <div className='text-info-app'>
+        <p>Greetings! My name is Aaron, I am 24, I find my true passion in the world of creation.
+          From my earliest years, I have immersed myself in the art of music, embarking on a
+          self-taught journey that has taken me through the realms of the programation learned it
+          by-self  and at the Air Force and computer science studies. Today, I am proud to present
+          an application born out of a simple desire that one day led me to rise with the intention
+          of engaging in physical activity.
+          <td></td>
+          This application, now available online, is a product of my dedication to the
+          well-being of all. It serves as a commitment to personal growth and the pursuit
+          of a healthy lifestyle. I invite everyone to explore its features and provide
+          feedback – if you happen to come across any glitches or issues, I am more than
+          willing to address them with enthusiasm. Let's embark on this journey towards
+          a healthier and happier life together!
+        </p>
+      </div>
     </div>
   )
 }

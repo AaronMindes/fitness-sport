@@ -1,22 +1,184 @@
+@use "../../index.scss" as gs;
+
 .about-container {
     background-image:
-        url("../../Images/background-wood.jpg");
-    background-repeat: repeat-x;
+        url("../../Images/background-aquarelle.jpg");
+    // background-color: gs.$third-color;
+    background-repeat: no-repeat;
     background-position: center;
     background-attachment: fixed;
     background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100%;
 
-    p {
-        margin: 0 auto;
-        background-color: #fffffff1;
-        margin: 20px 125px 0px 125px;
-        padding: 25px;
-        border-radius: 5px;
+    .info {
+        box-shadow: 1px 1px 2px #0a112857;
+        border-radius: 10px;
+        margin-top: 3%;
+        padding-bottom: 3%;
+        width: 60%;
+        height: 30vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        background-color: gs.$five-color;
+
+        .picture-profile-name {
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            width: 100%;
+        }
+
+        .name {
+            color: gs.$primary-color;
+            font-size: 50px;
+            font-weight: 700;
+            text-shadow: 1px 1px 2px #ffffff57;
+
+            div {
+                margin: 5px;
+            }
+        }
+
+        .picture {
+            background-image: url('../../Images/aaronProfilPicChihrour.jpg');
+            width: 200px;
+            height: 200px;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: 0px -40px;
+            border-radius: 50%;
+            box-shadow: 1px 1px 2px #ffffff57;
+            border: 4px solid white;
+        }
+
+        .social-network {
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-around;
+            width: 100%;
+
+            .YT {
+                position: relative;
+
+                .YT-options {
+                    position: absolute;
+                    top: 0;
+                    bottom: 0;
+                    left: 0;
+                    right: 0;
+                    z-index: 1;
+                }
+
+                .YT-music {
+                    transition: all 0.4s ease-in-out;
+                    position: absolute;
+                    top: 0;
+                    bottom: 0;
+                    left: 0;
+                    right: 0;
+                    opacity: 0;
+                }
+
+                .YT-programation {
+                    transition: all 0.4s ease-in-out;
+                    position: absolute;
+                    top: 0;
+                    bottom: 0;
+                    left: 0;
+                    right: 0;
+                    opacity: 0;
+                }
+
+                &:hover {
+                    .YT-music {
+                        top: 45px;
+                        left: 50px;
+                        opacity: 1;
+                    }
+
+                    .YT-programation {
+                        top: 45px;
+                        left: -50px;
+                        opacity: 1;
+                    }
+                }
+
+            }
+
+        }
     }
 
-    @media only screen and (max-width: 600px) {
+    .text-info-app {
+        width: 45%;
+
         p {
-            margin: 5px;
+            margin: 0 auto;
+            background-color: #fffffff1;
+            padding: 25px;
+            border-radius: 5px;
+            margin-top: 50px;
+            width: 80%;
+        }
+    }
+
+    @media only screen and (max-width: 1400px) {
+
+        .text-info-app {
+            width: 100%;
+
+            p {
+                margin-top: 20px;
+                margin-bottom: 20px;
+            }
+        }
+
+        .info {
+            width: 90%;
+            justify-content: center;
+
+            .picture {
+                width: 100px;
+                height: 100px;
+            }
+
+            .name {
+                font-size: 25px;
+            }
+
+            .social-network {
+                .YT-options>* {
+                    max-height: 35px;
+                }
+
+                a {
+                    svg {
+
+                        max-height: 35px;
+                    }
+                }
+
+                .YT {
+
+                    &:hover {
+                        .YT-music {
+                            top: 45px;
+                            left: 35px;
+                            opacity: 1;
+                        }
+
+                        .YT-programation {
+                            top: 45px;
+                            left: -35px;
+                            opacity: 1;
+                        }
+                    }
+                }
+            }
         }
     }
 }

@@ -16,7 +16,7 @@ const TrainingConfig = ({ initialSelectedCards, myPreset, myPresetName }) => {
 
     useEffect(() => {
         // setSelectedCards(initialSelectedCards.map(card => ({ ...card, pauseTime: 0 })));
-        setSelectedCards(initialSelectedCards.map(card => ({ ...card, pauseTime: 0, seriesNumber: 1, timePerSet: 5 })));
+        setSelectedCards(initialSelectedCards.map(card => ({ ...card, pauseTime: 0, seriesNumber: 1, timePerSet: 15 })));
     }, [initialSelectedCards]);
     useEffect(() => {
         myPreset(selectedCards);
@@ -110,13 +110,13 @@ const TrainingConfig = ({ initialSelectedCards, myPreset, myPresetName }) => {
                                 />
                             </div>
                         </div>
+                            {(selectedCards[index].seriesNumber > 1 || index !== selectedCards.length - 1) && (
                         <div className="arrow-container">
                             {index !== selectedCards.length - 1 && (
                                 <div className="arrow" onClick={() => switchCards(card, "left")}>
                                     <FontAwesomeIcon icon={faArrowAltCircleLeft} size='3x' color='#034078' />
                                 </div>
                             )}
-                        {(selectedCards[index].seriesNumber > 1 || index !== selectedCards.length - 1) && (
 
                             <div className='time'>
                                 <div className='time-content'>
@@ -129,14 +129,14 @@ const TrainingConfig = ({ initialSelectedCards, myPreset, myPresetName }) => {
                                     </div>
                                 </div>
                             </div>
-                        )}
                             {index !== selectedCards.length - 1 && (
-
+                                
                                 <div className="arrow" onClick={() => switchCards(card, "right")}>
                                     <FontAwesomeIcon icon={faArrowAltCircleRight} size='3x' color='#034078' />
                                 </div>
                             )}
                         </div>
+                                    )}
                         {/* {index !== selectedCards.length - 1 && (
                             <div className="arrow-container">
                                 <div className="arrow" onClick={() => switchCards(card, "left")}>
