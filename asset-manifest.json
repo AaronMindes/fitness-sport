@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/fitness-sport/static/css/main.0d36d1ec.css",
-    "main.js": "/fitness-sport/static/js/main.0d5eaa11.js",
+    "main.js": "/fitness-sport/static/js/main.1ae18298.js",
     "static/media/background-aquarelle.jpg": "/fitness-sport/static/media/background-aquarelle.4b76050fdf088aec9751.jpg",
     "static/media/1.jpg": "/fitness-sport/static/media/1.74fab9ce8515f43bc0aa.jpg",
     "static/media/0.jpg": "/fitness-sport/static/media/0.41fa432e66574ff86bae.jpg",
@@ -11,10 +11,10 @@
     "static/media/logo.png": "/fitness-sport/static/media/logo.8e64849d87ffe731cd43.png",
     "index.html": "/fitness-sport/index.html",
     "main.0d36d1ec.css.map": "/fitness-sport/static/css/main.0d36d1ec.css.map",
-    "main.0d5eaa11.js.map": "/fitness-sport/static/js/main.0d5eaa11.js.map"
+    "main.1ae18298.js.map": "/fitness-sport/static/js/main.1ae18298.js.map"
   },
   "entrypoints": [
     "static/css/main.0d36d1ec.css",
-    "static/js/main.0d5eaa11.js"
+    "static/js/main.1ae18298.js"
   ]
 }
